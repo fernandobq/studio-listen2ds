@@ -42,12 +42,6 @@ export const songType = defineType({
       description: 'Length of the song, e.g. "3:45".',
     }),
     defineField({
-      name: 'audioFile',
-      title: 'Audio file',
-      type: 'file',
-      options: {accept: 'audio/*'},
-    }),
-    defineField({
       name: 'genres',
       type: 'array',
       of: [defineArrayMember({type: 'reference', to: [{type: 'genre'}]})],
